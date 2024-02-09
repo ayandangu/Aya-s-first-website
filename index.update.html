@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Website</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: url("https://source.unsplash.com/random/1920x1080")
+          no-repeat center center fixed;
+        background-size: cover;
+      }
+
+      .container {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 3rem;
+        color: white;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: white;
+        margin: 0;
+      }
+
+      .quote-generator {
+        margin-top: 3rem;
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0.15);
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .quote-generator:hover {
+        background-color: rgba(255, 255, 255, 0.25);
+        cursor: pointer;
+      }
+
+      .quote-generator span {
+        display: block;
+        font-size: 1.5rem;
+        color: white;
+        margin-bottom: 0.5rem;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        .quote-generator {
+          padding: 0.75rem 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Bitch welcome to my very first website! Specially designed for you😝💅🏽,
+        I'll Be gradually making changes, so stay Tuned!
+      </h1>
+      <p>
+        A simple website made for my very best friend. Keep it going!- Aya 💪 .
+      </p>
+      <div class="quote-generator" onclick="generateQuote()">
+        <span id="quote"></span>
+        <span>Click here to generate a random quote!</span>
+      </div>
+    </div>
+    <script>
+      function generateQuote() {
+        const quotes = [
+          "The only way to achieve the impossible is to believe it is possible. - Charles Kingsleigh",
+          "Believe you can and you're halfway there. - Theodore Roosevelt",
+          "Don't watch the clock; do what it does. Keep going. - Sam Levenson",
+          "Dream bigger. Do bigger. - Author Unknown",
+          "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
+          "The best way to predict your future is to create it. - Abraham Lincoln",
+        ];
+        const quote = quotes[Math.floor(Math.random() * quotes.length)];
+        document.getElementById("quote").innerText = quote;
+      }
+    </script>
+  </body>
+</html>
